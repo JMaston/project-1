@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>Contact List</h1>
+      <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="text-center">#</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Email</th>
+        <th class="text-center">Phone</th>
+        <th class="text-center">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id}}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.email }}</td>
+        <td>{{ product.phone}}</td>
+        <td>
+          <button class="btn btn-info"
+                        (click)="showEditProductForm(product)">
+                       <i class="fa fa-edit"></i> Details / Edit
+              </button>
+          <button class="btn btn-danger"
+                       (click)="removeProduct(product)">
+                       <i class="fa fa-minus"></i> Delete
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-success"
+               (click)="showAddProductForm()"><i class="fa fa-plus"></i> New</button>
+  <br />
+  <br />
+
+  <form *ngIf="productForm">
+    <h2>Add New Contact</h2>
+    <p>ID: <input type="text"
+                           name="id"
+                           [(ngModel)]="newProduct.id" /></p>
+    <p>Name: <input type="text"
+                                 name="name"
+                                 [(ngModel)]="newProduct.name" /></p>
+    <p>Email: <input type="text"
+                                          name="Email"
+                                          [(ngModel)]="newProduct.email" /></p>
+    <p>phone: <input type="text"
+                                name="Phone"
+                                [(ngModel)]="newProduct.phone" /></p>
+    <p>
+      <button type="button"
+                   class="btn btn-primary"
+                   (click)="saveProduct(newProduct)">Submit</button>
+      <button type="button"
+                   class="btn btn-warning"
+                   (click)="cancelNewProduct()">Cancel</button>
+    </p>
+   </form>
+
+    <form *ngIf="editProductForm">
+    <h2>Edit Contact Details</h2>
+    <p>ID: <input type="text"
+                           name="id"
+                           [(ngModel)]="editedProduct.id" /></p>
+    <p>Name: <input type="text"
+                                 name="name"
+                                 [(ngModel)]="editedProduct.name" /></p>
+    <p>Email: <input type="text"
+                                          name="Email"
+                                          [(ngModel)]="editedProduct.email" /></p>
+    <p>Phone: <input type="text"
+                                name="Phone"
+                                [(ngModel)]="editedProduct.phone" /></p>
+    <p>
+      <button type="button"
+                   class="btn btn-primary"
+                   (click)="updateProduct(editedProduct)">Submit</button>
+      <button type="button"
+                   class="btn btn-warning"
+                   (click)="cancelEdits()">Cancel</button>
+    </p>
+   </form>
+  </div>
+</div>
