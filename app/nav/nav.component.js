@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var NavbarComponent = (function () {
     function NavbarComponent() {
-        this.appName = "Montoya, Jonathan 013180399 Project";
+        this.appName = "Reset";
     }
     return NavbarComponent;
 }());
