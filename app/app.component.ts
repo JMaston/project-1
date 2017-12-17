@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  appName: string = "Montoya, Jonathan 013180399 Project";
+  appName: string = "jacob Maston's Contact List";
 }
