@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.appName = "Montoya, Jonathan 013180399 Project";
+        this.appName = "Jacob Maston's Contact List";
     }
     return AppComponent;
 }());
