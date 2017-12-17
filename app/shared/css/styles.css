@@ -1,6 +1,7 @@
 /* Navbar */
 .nav .navbar-nav {
   font-size: 15px;
+  background-color: rgb(45, 45, 212);
 }
 #searchForm {
   margin-right: 100px;
